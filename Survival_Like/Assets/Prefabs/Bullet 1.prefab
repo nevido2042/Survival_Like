@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bcf5a338d838447822c3fb88e20365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  damage: 10
+  damage: 1
   per: 1
 --- !u!70 &6972252376098703392
 CapsuleCollider2D:
