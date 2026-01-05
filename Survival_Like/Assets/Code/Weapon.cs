@@ -19,6 +19,9 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isLive)
+            return;
+
         switch (id)
         {
             case 0:
@@ -79,6 +82,10 @@ public class Weapon : MonoBehaviour
                 speed = 0.3f;
                 break;
         }
+
+        Hand hand = player.hands[(int)data.itemType];
+        hand.spriteRenderer.sprite = data.hand;
+        hand.gameObject.SetActive(true);
 
         player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
